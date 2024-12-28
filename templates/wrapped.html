@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block wrapped%}
+
+<div style="text-align: center;">
+    <img style="width: 375px; ;" src="{{url_for('static', filename = 'wrapped.jpg')}}">
+</div>
+
+
+<div style="text-align: center;">
+    <a href="/">
+        <img style="width: 100px;" src="{{url_for('static', filename = 'back.png')}}">
+    </a>
+</div>
+
+{% endblock %}

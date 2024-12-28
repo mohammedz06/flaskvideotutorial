@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block books %}
+
+<div style="text-align: center;">
+    <img style="width: 350px;" src="{{url_for('static', filename = 'thestranger.jpg')}}">
+</div>
+
+<h2>I recommend The Stranger by Albert Camus. It's a pretty good book.</h2>
+
+
+<br>
+<br>
+
+<div style="text-align: center;">
+    <a href="/">
+        <img style="width: 100px;" src="{{url_for('static', filename = 'back.png')}}">
+    </a>
+</div>
+
+
+{% endblock %}

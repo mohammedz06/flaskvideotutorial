@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+
+{% block homepage %}
+
+<h2>Welcome to Mohammed's Webpage! Here you will find everything Mohammed related!</h2>
+
+{% if not user_logged_in %}
+    <div style="text-align: center;">
+        <a style="display: inline-block;" href="login">
+            <img style= "margin: 0 auto;" src = "{{url_for('static', filename = 'signin.png')}}">
+        </a>
+    </div>
+{% endif %}
+
+
+
+<br>
+<br>
+
+
+<div style="text-align: center;">
+    <a href="resume">
+        <img style="margin: 0 50px; display: inline-block;" src = "{{url_for('static', filename = 'resume.png')}}">
+    </a>
+    
+    <a href = "books">
+        <img style="display: inline-block; margin: 0 50px" src = "{{url_for('static', filename = 'books.png')}}">
+    </a>
+    
+    <a href="wrapped">
+        <img style="display: inline-block; margin: 0 50px" src = "{{url_for('static', filename = 'wrapped.png')}}">
+    </a>
+</div>
+
+{% if user_logged_in %}
+    <div style="text-align: center;">
+        <a href = "logout">
+            <img src = "{{url_for('static', filename = 'logout.png')}}">
+        </a>
+    </div>
+{% endif %}
+
+{% if user_logged_in %}
+    <div style="position: absolute; bottom: 0; text-align: center; width: 100%;">
+        <h2>
+            Logged in as {{user}}. Welcome!
+        </h2>
+    </div>
+{% endif %}
+
+
+
+
+
+{% endblock %}

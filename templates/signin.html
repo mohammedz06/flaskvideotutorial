@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block login %}
+<h2>Login Page</h2>
+
+
+<form action = "#", method="post">
+    <p style="left: 50px;">Name:</p>
+    <p style="left: 50px;"><input type ="text" name="nm"/></p>
+    <p style="left: 50px"><input type ="submit" name="submit"/></p>
+
+</form> 
+
+<br>
+<br>
+
+<div style="text-align: center;">
+    <a href="/">
+        <img style="width: 100px;" src="{{url_for('static', filename = 'back.png')}}">
+    </a>
+</div>
+
+
+
+{% endblock %}
